@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Sismics Docs : Lightweight document management system">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sismics Docs</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/sismics/docs">View on GitHub</a>
+
+          <h1 id="project_title">Sismics Docs</h1>
+          <h2 id="project_tagline">Lightweight document management system</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/sismics/docs/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/sismics/docs/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><em>Web interface</em></p>
+
+<p><img src="http://sismics.com/docs/screenshot1.png" alt="Web interface"></p>
+
+<p><em>Android application</em></p>
+
+<p><img src="http://sismics.com/docs/android1.png" alt="Android documents list"> <img src="http://sismics.com/docs/android2.png" alt="Android navigation"> <img src="http://sismics.com/docs/android3.png" alt="Android document details"></p>
+
+<h2>
+<a id="what-is-docs" class="anchor" href="#what-is-docs" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is Docs?</h2>
+
+<p>Docs is an open source, lightweight document management system.</p>
+
+<p>Docs is written in Java, and may be run on any operating system with Java support.</p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>Responsive user interface</li>
+<li>Optical character recognition</li>
+<li>Support image and PDF files</li>
+<li>Flexible search engine</li>
+<li>Full text search in image and PDF</li>
+<li>SHA-256 encryption</li>
+<li>Tag system</li>
+<li>Multi-users</li>
+<li>Document sharing</li>
+<li>RESTful Web API</li>
+</ul>
+
+<h2>
+<a id="download" class="anchor" href="#download" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download</h2>
+
+<p>The latest release is downloadable here: <a href="https://github.com/sismics/docs/releases">https://github.com/sismics/docs/releases</a> in WAR format.
+You will need a Java webapp server to run it, like <a href="http://eclipse.org/jetty/">Jetty</a> or <a href="http://tomcat.apache.org/">Tomcat</a></p>
+
+<h2>
+<a id="how-to-build-docs-from-the-sources" class="anchor" href="#how-to-build-docs-from-the-sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to build Docs from the sources</h2>
+
+<p>Prerequisites: JDK 7, Maven 3, Tesseract 3.02</p>
+
+<p>Docs is organized in several Maven modules:</p>
+
+<ul>
+<li>docs-parent</li>
+<li>docs-core</li>
+<li>docs-web</li>
+<li>docs-web-common</li>
+</ul>
+
+<p>First off, clone the repository: <code>git clone git://github.com/sismics/docs.git</code>
+or download the sources from GitHub.</p>
+
+<h4>
+<a id="launch-the-build" class="anchor" href="#launch-the-build" aria-hidden="true"><span class="octicon octicon-link"></span></a>Launch the build</h4>
+
+<p>From the <code>docs-parent</code> directory:</p>
+
+<pre><code>mvn -Pinit validate -N
+mvn clean -DskipTests install
+</code></pre>
+
+<h4>
+<a id="run-a-stand-alone-version" class="anchor" href="#run-a-stand-alone-version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run a stand-alone version</h4>
+
+<p>From the <code>docs-web</code> directory:</p>
+
+<pre><code>mvn jetty:run
+</code></pre>
+
+<h4>
+<a id="build-a-war-to-deploy-to-your-servlet-container" class="anchor" href="#build-a-war-to-deploy-to-your-servlet-container" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build a .war to deploy to your servlet container</h4>
+
+<p>From the <code>docs-web</code> directory:</p>
+
+<pre><code>mvn -Pprod -DskipTests clean install
+</code></pre>
+
+<p>You will get your deployable WAR in the <code>target</code> directory.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Docs is released under the terms of the GPL license. See <code>COPYING</code> for more
+information or see <a href="http://opensource.org/licenses/GPL-2.0">http://opensource.org/licenses/GPL-2.0</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sismics Docs maintained by <a href="https://github.com/sismics">sismics</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
